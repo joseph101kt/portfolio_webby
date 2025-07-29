@@ -23,6 +23,32 @@
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./animations.css" />
     
+    <!-- Moved Tailwind CSS CDN and Google Fonts link here, outside of React components -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Moved custom scrollbar styles here, outside of React components -->
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      /* Custom scrollbar for a cleaner look in dark mode */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #333; /* Darker track */
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #555; /* Darker thumb */
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #777; /* Lighter thumb on hover */
+      }
+    </style>
+
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
