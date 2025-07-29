@@ -211,6 +211,92 @@
         )
       }
 
+      function Products() {
+        const products = [
+          {
+            id: 1,
+            name: "Minimal Desk",
+            description: "Ergonomic, space-saving furniture for modern workspaces.",
+            imageUrl: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80",
+            enquiryUrl: "mailto:youremail@example.com?subject=Enquiry: Minimal Desk",
+          },
+          {
+            id: 2,
+            name: "Wireless Headphones",
+            description: "Crystal-clear audio with modern design and all-day comfort.",
+            imageUrl: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80",
+            enquiryUrl: "mailto:youremail@example.com?subject=Enquiry: Wireless Headphones",
+          },
+          {
+            id: 3,
+            name: "Portfolio Website",
+            description: "Fast, SEO-optimised portfolio for professionals and students.",
+            imageUrl: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80",
+            enquiryUrl: "mailto:youremail@example.com?subject=Enquiry: Portfolio Website",
+          },
+          {
+            id: 4,
+            name: "Modern Lamp",
+            description: "Smart lighting with minimalist looks and app control.",
+            imageUrl: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+            enquiryUrl: "mailto:youremail@example.com?subject=Enquiry: Modern Lamp",
+          },
+          {
+            id: 5,
+            name: "Marketing Consulting",
+            description: "SEO audits and campaign planning for small businesses.",
+            imageUrl: "https://images.unsplash.com/photo-1454023492550-5696f8ff10e1?auto=format&fit=crop&w=600&q=80",
+            enquiryUrl: "mailto:youremail@example.com?subject=Enquiry: Marketing Consulting",
+          },
+          {
+            id: 6,
+            name: "Branding Kit",
+            description: "Clean logos, color palettes, and social media pack.",
+            imageUrl: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80",
+            enquiryUrl: "mailto:youremail@example.com?subject=Enquiry: Branding Kit",
+          },
+        ];
+
+        return (
+          <section
+            id="products"
+            className="min-h-screen bg-neutral-900 text-white px-6 py-16 md:py-24 flex flex-col items-center"
+          >
+            <h2 className="text-3xl font-semibold mb-6 text-center text-primary-light">
+              Products
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl w-full">
+              {products.map(function (product) {
+                return (
+                  <div
+                    key={product.id}
+                    className="bg-white/5 p-6 rounded-xl border border-neutral-700 shadow-lg flex flex-col hover:border-secondary-light hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
+                  >
+                    <img
+                      src={product.imageUrl}
+                      alt={product.name + " image"}
+                      className="mb-4 w-full h-48 object-cover rounded-lg"
+                      loading="lazy"
+                    />
+                    <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
+                    <p className="text-gray-300 mb-4">{product.description}</p>
+                    <a
+                      href={product.enquiryUrl}
+                      className="mt-auto bg-yellow-400 text-black font-semibold px-6 py-3 rounded-2xl shadow-lg hover:bg-yellow-300 transition text-center"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Enquire Now
+                    </a>
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+        );
+      }
+
+
       function Contact() {
         return (
           <section id="contact" className="bg-neutral-900 text-white py-24 px-6 md:px-12 flex flex-col items-center">
