@@ -337,12 +337,13 @@
           },
         ];
 
-        // Function to simulate scrolling to a contact section or showing a modal
+
         const scrollToContact = () => {
-          // In a real portfolio, you would replace this with actual navigation
-          // or a modal pop-up for inquiries.
-          console.log("Enquire Now clicked! Implement your contact logic here.");
-          alert("Thank you for your interest! Please contact us for more details.");
+          const contact = document.getElementById("contact");
+
+          if (contact) {
+            contact.scrollIntoView({ behavior: "smooth" });
+          }
         };
 
         return (
