@@ -281,32 +281,31 @@
         return (
           <section
             id="products"
-            className="min-h-screen bg-neutral-900 text-white px-6 py-16 md:py-24 flex flex-col items-center"
+            className="min-h-screen bg-neutral-900 text-white px-6 py-16 md:py-24"
           >
-            <h2 className="text-3xl font-bold mb-8 text-center text-yellow-400">Our Products</h2>
+            <h2 className="text-3xl font-bold mb-12 text-center text-yellow-400">Our Products</h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
               {products.map((product) => (
                 <div
                   key={product.id}
-                  className="bg-white/5 rounded-xl border border-neutral-700 shadow-md hover:shadow-xl hover:border-yellow-400 transition-all duration-300 overflow-hidden flex flex-col"
+                  className="flex flex-col bg-white/5 border border-neutral-700 rounded-xl shadow-lg hover:shadow-xl hover:border-yellow-400 transition-all duration-300"
                 >
                   <img
                     src={product.imageUrl}
                     alt={product.name}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-48 object-cover rounded-t-xl"
                     loading="lazy"
                   />
-                  <div className="p-5 flex flex-col justify-between flex-1">
-                    <div>
-                      <h3 className="text-xl font-semibold mb-1">{product.name}</h3>
-                      <p className="text-gray-300 text-sm mb-3">{product.description}</p>
-                    </div>
-                    <div className="flex justify-between items-center mt-auto">
-                      <span className="text-yellow-400 font-bold text-lg">{product.price}</span>
+                  <div className="flex-1 flex flex-col p-4">
+                    <h3 className="text-lg font-semibold mb-1">{product.name}</h3>
+                    <p className="text-sm text-gray-300 mb-2">{product.description}</p>
+                    <span className="text-yellow-400 font-bold text-md mb-4">{product.price}</span>
+
+                    <div className="mt-auto">
                       <button
                         onClick={scrollToContact}
-                        className="bg-yellow-400 text-black font-semibold px-4 py-2 rounded-xl hover:bg-yellow-300 transition"
+                        className="w-full bg-yellow-400 text-black font-semibold px-4 py-2 rounded-lg hover:bg-yellow-300 transition"
                       >
                         Enquire Now
                       </button>
